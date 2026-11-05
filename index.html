@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#fdf3f6">
+<title>Un jardín para Jaris</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Montserrat:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="gLeaf" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1d4a2e"/><stop offset=".55" stop-color="#3f8a55"/><stop offset="1" stop-color="#2a6a40"/></linearGradient>
+    <g id="leafg"><path d="M0 0C16-50 18-130 0-200C-18-130-16-50 0 0Z" fill="url(#gLeaf)"/><path d="M0-4L0-188" stroke="rgba(255,255,255,.3)" stroke-width="1.3" fill="none"/></g>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
+    <pattern id="pStripe" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#fcf0f5"/><rect width="3" height="7" fill="#f1cfe0"/></pattern>
+    <pattern id="pStripeS" width="2.2" height="2.2" patternUnits="userSpaceOnUse"><rect width="2.2" height="2.2" fill="#fcf0f5"/><rect width="1" height="2.2" fill="#f1cfe0"/></pattern>
+    <linearGradient id="gPaper" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fffdfd"/><stop offset="1" stop-color="#fbe6ef"/></linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="6"/></filter>
+  </defs>
+</svg>
+
+<div class="sky" aria-hidden="true"></div>
+<div class="bokeh" aria-hidden="true">
+  <i style="--c:#ffc2dc;--s:210px;--x:-12%;--y:6%;--t:19s;--dx:40px;--dy:30px"></i>
+  <i style="--c:#ffffff;--s:150px;--x:68%;--y:12%;--t:23s;--dx:-30px;--dy:44px"></i>
+  <i style="--c:#d9efc2;--s:180px;--x:78%;--y:52%;--t:27s;--dx:-46px;--dy:-26px"></i>
+  <i style="--c:#ffd9ea;--s:240px;--x:-18%;--y:56%;--t:21s;--dx:50px;--dy:-38px"></i>
+  <i style="--c:#fff0c8;--s:110px;--x:42%;--y:30%;--t:17s;--dx:26px;--dy:36px"></i>
+  <i style="--c:#ffffff;--s:130px;--x:20%;--y:84%;--t:25s;--dx:36px;--dy:-30px"></i>
+</div>
+<svg class="fol fol-l" viewBox="0 0 170 250" aria-hidden="true">
+  <g class="sway" style="--d:0s"><use href="#leafg" style="transform:translate(40px,250px) rotate(-52deg) scale(.55)"/></g>
+  <g class="sway" style="--d:-1.4s"><use href="#leafg" style="transform:translate(40px,250px) rotate(-30deg) scale(.82)"/></g>
+  <g class="sway" style="--d:-2.8s"><use href="#leafg" style="transform:translate(40px,250px) rotate(-8deg) scale(1.05)"/></g>
+  <g class="sway" style="--d:-4.2s"><use href="#leafg" style="transform:translate(40px,250px) rotate(14deg) scale(.88)"/></g>
+  <g class="sway" style="--d:-5.6s"><use href="#leafg" style="transform:translate(40px,250px) rotate(34deg) scale(.6)"/></g>
+</svg>
+<svg class="fol fol-r" viewBox="0 0 170 250" aria-hidden="true">
+  <g class="sway" style="--d:-.7s"><use href="#leafg" style="transform:translate(40px,250px) rotate(-48deg) scale(.6)"/></g>
+  <g class="sway" style="--d:-2.1s"><use href="#leafg" style="transform:translate(40px,250px) rotate(-24deg) scale(.95)"/></g>
+  <g class="sway" style="--d:-3.5s"><use href="#leafg" style="transform:translate(40px,250px) rotate(0deg) scale(.78)"/></g>
+  <g class="sway" style="--d:-4.9s"><use href="#leafg" style="transform:translate(40px,250px) rotate(24deg) scale(.7)"/></g>
+</svg>
+<canvas id="fx" aria-hidden="true"></canvas>
+
+<header class="stepper">
+  <ol aria-label="Progreso del viaje">
+    <li><i></i>Inicio</li>
+    <li><i></i>Ramo</li>
+    <li><i></i>Carta</li>
+    <li><i></i>Final</li>
+  </ol>
+</header>
+
+<main>
+  <section class="screen" id="s-welcome" data-step="0" tabindex="-1">
+    <p class="eyebrow">Una carta para</p>
+    <h1 class="name" id="nameH">Jaris</h1>
+    <div class="stage" id="stage">
+      <svg class="stem-svg" viewBox="0 0 300 400" aria-hidden="true">
+        <path d="M150 400C150 340 146 270 150 200" fill="none" stroke="#3d7a4c" stroke-width="6" stroke-linecap="round"/>
+        <use href="#leafg" transform="translate(150 380) rotate(-54) scale(.5)"/>
+        <use href="#leafg" transform="translate(150 345) rotate(48) scale(.44)"/>
+        <use href="#leafg" transform="translate(149 398) rotate(-16) scale(.36)"/>
+        <use href="#leafg" transform="translate(151 398) rotate(18) scale(.32)"/>
+      </svg>
+      <button class="lily-btn" type="button" id="introLily" aria-label="Tocar la flor para que se abra">
+        <span class="ring"></span><span class="lh" id="introHost"></span>
+      </button>
+    </div>
+    <p class="hint" id="introHint">Toca la flor</p>
+    <div class="reveal" id="introReveal" hidden>
+      <p class="lead" id="introLead"></p>
+      <button class="btn" type="button" data-go="bouquet">Comenzar <svg class="ico" aria-hidden="true"><use href="#i-chev"/></svg></button>
+    </div>
+  </section>
+
+  <section class="screen" id="s-bouquet" data-step="1" tabindex="-1" hidden>
+    <h2 id="bouquetTitle"></h2>
+    <div class="bouquet" id="bouquet">
+      <div class="b-inner" id="bInner">
+        <svg class="b-svg" viewBox="0 0 100 125" aria-hidden="true">
+          <g id="stemsG"></g>
+          <g class="vase">
+            <path d="M38 96L38 117Q38 121 42 121L58 121Q62 121 62 117L62 96Z" fill="rgba(255,255,255,.38)" stroke="rgba(255,255,255,.95)" stroke-width=".5"/>
+            <path d="M38.4 105L61.6 105L61.6 117Q61.6 120.6 58 120.6L42 120.6Q38.4 120.6 38.4 117Z" fill="rgba(190,225,235,.3)"/>
+            <path d="M40.4 98L40.4 116" stroke="rgba(255,255,255,.8)" stroke-width=".8" stroke-linecap="round"/>
+            <g fill="rgba(255,255,255,.9)"><circle cx="42" cy="119" r="1.2"/><circle cx="45.5" cy="119.6" r="1.3"/><circle cx="49" cy="119" r="1.1"/><circle cx="52.5" cy="119.6" r="1.3"/><circle cx="56" cy="119" r="1.2"/><circle cx="58.6" cy="118.4" r="1"/><circle cx="43.6" cy="117.6" r="1"/><circle cx="54" cy="117.8" r="1"/></g>
+            <g class="vbow">
+              <path d="M49 108C45 103 38 103 38.6 108C38 113 45 114 49 108Z" fill="url(#pStripeS)" stroke="rgba(168,40,106,.35)" stroke-width=".25"/>
+              <path d="M51 108C55 103 62 103 61.4 108C62 113 55 114 51 108Z" fill="url(#pStripeS)" stroke="rgba(168,40,106,.35)" stroke-width=".25"/>
+              <path d="M49.4 109L46.4 119.6L48.8 118L50 120.4Z" fill="url(#pStripeS)" stroke="rgba(168,40,106,.35)" stroke-width=".25"/>
+              <path d="M50.6 109L53.6 119.6L51.2 118L50 120.4Z" fill="url(#pStripeS)" stroke="rgba(168,40,106,.35)" stroke-width=".25"/>
+              <ellipse cx="50" cy="108" rx="2.2" ry="2.6" fill="#f08cb9"/>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div class="msg" id="msg" aria-live="polite"><p class="msg-hint">Toca una flor para abrirla</p></div>
+    <p class="counter" id="counter" aria-live="polite"></p>
+    <button class="btn" type="button" id="bouquetNext" hidden>Continuar <svg class="ico" aria-hidden="true"><use href="#i-chev"/></svg></button>
+  </section>
+
+  <section class="screen" id="s-ribbon" data-step="2" tabindex="-1" hidden>
+    <p class="eyebrow">Una carta atada con cariño</p>
+    <button class="gift" type="button" id="gift" aria-label="Desatar el lazo y abrir la carta">
+      <svg class="g-svg" viewBox="0 0 300 210" aria-hidden="true">
+        <rect x="22" y="30" width="262" height="166" rx="6" fill="rgba(110,25,70,.3)" filter="url(#soft)"/>
+        <g class="part card"><rect x="16" y="18" width="268" height="168" rx="6" fill="url(#gPaper)" stroke="rgba(168,40,106,.3)"/><rect x="25" y="27" width="250" height="150" rx="3" fill="none" stroke="rgba(168,40,106,.24)" stroke-dasharray="3 4"/></g>
+        <g class="part rb-band"><rect x="132" y="14" width="36" height="176" fill="url(#pStripe)"/><rect x="132" y="14" width="1.2" height="176" fill="rgba(168,40,106,.25)"/><rect x="166.8" y="14" width="1.2" height="176" fill="rgba(168,40,106,.25)"/></g>
+        <path class="part tail-l" d="M148 108L134 110L112 170L128 163L131 178Z" fill="url(#pStripe)" stroke="rgba(168,40,106,.32)" stroke-width=".8"/>
+        <path class="part tail-r" d="M152 108L166 110L188 170L172 163L169 178Z" fill="url(#pStripe)" stroke="rgba(168,40,106,.32)" stroke-width=".8"/>
+        <path class="part bow-l" d="M150 100C118 58 66 66 70 100C66 134 118 142 150 100Z" fill="url(#pStripe)" stroke="rgba(168,40,106,.32)" stroke-width=".8"/>
+        <path class="part bow-r" d="M150 100C182 58 234 66 230 100C234 134 182 142 150 100Z" fill="url(#pStripe)" stroke="rgba(168,40,106,.32)" stroke-width=".8"/>
+        <g class="part knot"><ellipse cx="150" cy="100" rx="13" ry="15" fill="#f08cb9" stroke="rgba(168,40,106,.4)"/><ellipse cx="146" cy="95" rx="4" ry="6" fill="rgba(255,255,255,.45)"/></g>
+      </svg>
+      <span class="gift-lily" id="giftHost"></span>
+    </button>
+    <h2>Ahora quiero escribirte algo...</h2>
+    <p class="lead sm" id="ribbonLead"></p>
+    <button class="btn" type="button" id="untie">Desatar el lazo <svg class="ico" aria-hidden="true"><use href="#i-chev"/></svg></button>
+  </section>
+
+  <section class="screen" id="s-letter" data-step="2" tabindex="-1" hidden>
+    <article class="paper">
+      <div class="paper-lily" id="paperHost"></div>
+      <div class="paper-body"><div class="pages" id="pages" aria-live="polite"></div></div>
+      <div class="paper-controls">
+        <button class="round back" type="button" id="prevPage" aria-label="Página anterior"><svg class="ico" aria-hidden="true"><use href="#i-chev"/></svg></button>
+        <span id="pageNo"></span>
+        <button class="round" type="button" id="nextPage" aria-label="Página siguiente"><svg class="ico" aria-hidden="true"><use href="#i-chev"/></svg></button>
+      </div>
+    </article>
+  </section>
+
+  <section class="screen" id="s-final" data-step="3" tabindex="-1" hidden>
+    <div class="final-wrap"><div class="halo" aria-hidden="true"></div><div class="fl-host" id="finalHost"></div></div>
+    <h2 class="script-title" id="finalTitle"></h2>
+    <div class="divider" aria-hidden="true"><i></i><svg class="ico"><use href="#i-heart"/></svg><i></i></div>
+    <p class="lead sm" style="margin-top:0" id="finalText"></p>
+    <button class="btn" type="button" id="loveBtn">Te amo <svg class="ico fill" aria-hidden="true"><use href="#i-heart"/></svg></button>
+    <p class="love-note" id="loveNote" hidden></p>
+    <button class="link" type="button" id="replay">Volver a vivir este viaje ↻</button>
+  </section>
+</main>
+
+<footer>UN JARDÍN SOLO PARA TI <span>♡</span></footer>
+
+<script src="script.js"></script>
+</body>
+</html>
