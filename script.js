@@ -5,40 +5,41 @@
    Todo lo que aparece ahora son textos de ejemplo.
    ========================================================= */
 window.CARTA = {
-  name: 'Jaris',
+  name: 'Jaro',
   introLead: 'Hay personas que llegan y, sin darse cuenta, hacen florecer todo a su alrededor.',
   bouquetTitle: 'Cada flor guarda algo de lo que siento por ti',
   flowers: [
-    { label: 'Tu sonrisa', text: 'Esa sonrisa que ilumina todo, incluso mis días más grises.' },
-    { label: 'Tu ternura', text: 'Cómo cuidas de quienes quieres. A mí también me cuidas, y lo noto.' },
-    { label: 'Tu fuerza', text: 'Admiro tu valentía, incluso cuando tú no la ves. Me enseñas más de lo que imaginas.' },
-    { label: 'Nuestros sueños', text: 'En cada plan que imagino hay un lugar a tu lado, y todos se ven mejor así.' },
-    { label: 'Nuestra historia', text: 'No tiene que ser perfecta para ser la que quiero. Me gusta cómo la vamos escribiendo.' }
+    { label: 'Tu sonrisa', text: 'Esa sonrisa que ilumina todo, incluso mis días más grises llenando todo mi ser.' },
+    { label: 'Tu ternura', text: 'como haces todo con tanto amor y cuidado tratando todo con tu perfecion :3.' },
+    { label: 'Tu fuerza', text: 'Admiro tu valentía, incluso cuando tú no la ves. Me enseñas y me muestras lo mucho que te esfuerzas .' },
+    { label: 'Nuestros sueños', text: 'En cada plan que tenemos o cada charla que tenemos veo como seremos felicis teniendonos a los dos.' },
+    { label: 'Nuestra historia', text: 'no somos perfectos pero hacemos todo desde el amor, la confianza y el respeto.te amare cada dia de los años que pasemos juntos.' }
   ],
-  ribbonLead: 'Es una carta desde mi corazón, para ti, Jaris. Espero que la leas con la misma ilusión con la que la escribo.',
+  ribbonLead: 'Es una carta desde mi corazón, para ti, Jaro. Espero que la leas con la misma ilusión con la que la escribo.',
   letter: {
-    greeting: 'Mi Jaris,',
+    greeting: 'Mi Jaro,',
     pages: [
       [
-        'Desde que llegaste a mi vida, todo se siente diferente. No sé cómo explicarlo, pero es como si todo hubiera florecido en su lugar.',
-        'Tu forma de ser, tu manera de mirar las cosas, tu risa, tus locuras... Todo en ti me hace sentir en un lugar especial, un lugar donde quiero quedarme por mucho tiempo.',
-        'Gracias por estar aquí, por ser tú, por hacer mis días más bonitos y por darle un significado tan hermoso a esta historia que estamos construyendo.'
+        'Desde que llegaste a mi vida, todo se siente diferente. No sé cómo explicarlo, pero es como si todo hubiera florecido en un momento.',
+        'donde no tenia nada y derepente todo lo que tenia se convirtio en algo hermoso, y todo eso es gracias a ti, a tu amor, a tu ternura y a tu forma de ser.',
+        'te deseo lo mejor de lo mejor, y que todo lo que nos propongamos se cumpla, porque te lo mereces, se que no soy el mejor pero ten por seguro que cada dia lucho por nuestro amor por darte todo de mi :3'
       ],
       [
-        'Me encanta la forma en la que me apoyas, cómo siempre estás ahí, cómo me motivas a ser mejor y cómo, con solo estar presente, haces que todo se sienta más ligero.',
-        'No importa la distancia, el tiempo o los obstáculos, siempre voy a elegirte. Porque contigo todo es más bonito, más real y más especial.',
+        'Me encanta la forma en la que me apoyas, cómo siempre estás ahí, cómo me motivas a ser mejor y cómo, con solo estar presente, haces que todo se sienta más libiano.',
+        'No importa la distancia, el tiempo o los obstáculos, siempre voy a elegirte a estar contigo. Porque contigo todo es más bonito, más real y más especial. "te buscaria en esta y 30mil vidad mas"',
         'Quiero un futuro a tu lado, lleno de sueños, proyectos, viajes, risas y muchos momentos que solo nosotros vamos a entender.'
       ],
       [
-        'Quiero seguir escribiendo esta historia contigo y que cada capítulo sea aún más bonito que el anterior.',
-        'Gracias por ser mi Jaris, por confiar en mí y por hacer de mi vida un lugar tan increíble. Te amo, hoy, mañana y siempre.'
+        'Quiero seguir escribiendo esta hermosa historia contigo y que cada capítulo de nuestra vida sea aún más bonito que el anterior aunque no sea perfecto que cada dia sea mejor que el anterior.',
+        'Gracias por ser mi Jarito, por confiar en mí y por hacer de mi vida un lugar tan increíble. Te amo, hoy, mañana y siempre.',
+        'FELIZZZZZ CUMPLEEEE MIIIII jAROOOOOOO'
       ]
     ],
     closing: 'Con todo mi amor,',
-    signed: 'Tu persona favorita ♡'
+    signed: 'Tu Bey ♡'
   },
   final: {
-    title: 'Gracias por florecer a mi lado, Jaris.',
+    title: 'Gracias por florecer a mi lado, Mi jarito.',
     text: 'Y prometo cuidar este jardín contigo, todos los días.',
     note: 'Hoy, mañana y siempre ♡'
   }
